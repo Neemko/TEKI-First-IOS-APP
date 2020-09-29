@@ -13,30 +13,43 @@
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Teki" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tu es le Steve Jobs de la raclette party !" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m6S-w7-rcQ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tu es .... !" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m6S-w7-rcQ">
                                 <rect key="frame" x="20" y="20" width="374" height="514"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="514" id="IB9-sl-c9R"/>
+                                    <constraint firstAttribute="width" constant="374" id="Kq8-jJ-CmY"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="60"/>
                                 <color key="textColor" red="0.74117647058823533" green="0.1803921568627451" blue="0.12941176470588234" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Amj-B5-tlO">
-                                <rect key="frame" x="69" y="533" width="277" height="103"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Amj-B5-tlO">
+                                <rect key="frame" x="82" y="542" width="250" height="100"/>
                                 <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="ZLf-UJ-1wV"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="nJO-UG-4Oo"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="45"/>
                                 <state key="normal" title="ET MOI ?">
                                     <color key="titleColor" red="0.38823529411764707" green="0.38039215686274508" blue="0.38039215686274508" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="changeQuote" destination="BYZ-38-t0r" eventType="touchUpInside" id="lv3-mY-g4l"/>
+                                    <action selector="changeQuote" destination="BYZ-38-t0r" eventType="touchUpInside" id="vHz-9x-E6U"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.96078431372549022" green="0.95294117647058818" blue="0.93725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Amj-B5-tlO" firstAttribute="top" secondItem="m6S-w7-rcQ" secondAttribute="bottom" constant="8" id="Qli-hf-Zzy"/>
+                            <constraint firstItem="m6S-w7-rcQ" firstAttribute="centerX" secondItem="Amj-B5-tlO" secondAttribute="centerX" id="RUp-QZ-c6R"/>
+                            <constraint firstItem="m6S-w7-rcQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="YLN-KN-EsL"/>
+                            <constraint firstItem="m6S-w7-rcQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="cXx-Tm-J1X"/>
+                            <constraint firstItem="Amj-B5-tlO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cia-95-WbJ"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="quoteLabel" destination="m6S-w7-rcQ" id="Ovl-SF-enM"/>

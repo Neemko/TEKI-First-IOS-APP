@@ -13,15 +13,16 @@ class ViewController: UIViewController {
     var activities = ["du dancefloor", "du barbecue", "de la surprise ratée", "des blagues lourdes", "de la raclette party"]
     @IBOutlet weak var quoteLabel: UILabel!
     @IBAction func changeQuote() {
-        var randomIndex1 = Int(arc4random_uniform(UInt32(celebrities.count)))
-        var randomCelebrity = celebrities[randomIndex1]
-        print(randomCelebrity)
         
-        var randomIndex2 = Int(arc4random_uniform(UInt32(activities.count)))
-        var randomActivity = activities[randomIndex2]
-        print(randomActivity)
+        let randomIndex1 = Int(arc4random_uniform(UInt32(celebrities.count)))
+        let randomCelebrity = celebrities[randomIndex1]
         
-        quoteLabel.text = "Le texte est modifié !"
+        let randomIndex2 = Int(arc4random_uniform(UInt32(activities.count)))
+        let randomActivity = activities[randomIndex2]
+        
+        let quote = "Tu es " + randomCelebrity + " " + randomActivity + " !"
+        
+        quoteLabel.text = quote
     }
 }
 
